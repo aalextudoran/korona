@@ -64,12 +64,13 @@ export default function Footer() {
         >
           {/* Logo + tagline */}
           <div className="md:col-span-2 flex flex-col gap-5">
-            <div className="relative h-16 w-60 bg-[#1E1E1E] px-2 py-1.5 border border-[#1E1E1E]" style={{ lineHeight: 0 }}>
+            <div style={{ lineHeight: 0 }}>
               <Image
                 src="/logo.png"
                 alt="Korona Pub Social Club"
-                fill
-                className="object-contain object-left"
+                width={1170}
+                height={751}
+                className="object-contain object-left h-20 w-auto origin-left scale-x-130 scale-y-120"
               />
             </div>
             <p
