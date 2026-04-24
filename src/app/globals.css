@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ── BRAND PALETTE ───────────────────────────────────── */
+  --color-bg-primary:  #111111;
+  --color-bg-warm:     #1A1500;
+  --color-bg-card:     #1E1E1E;
+  --color-bg-navbar:   #0D0D0D;
+  --color-text-main:   #FFFFFF;
+  --color-text-muted:  #999999;
+  --color-yellow:      #F5A623;
+
+  /* ── FONTS ───────────────────────────────────────────── */
+  --font-anton:  var(--font-anton);
+  --font-barlow: var(--font-barlow);
+  /* legacy aliases */
+  --font-playfair: var(--font-anton);
+  --font-inter:    var(--font-barlow);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ── BASE ─────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111111;
+  color: #FFFFFF;
+  font-family: var(--font-barlow), Barlow, 'Helvetica Neue', sans-serif;
+}
+
+/* ── SCROLLBAR ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #111111; }
+::-webkit-scrollbar-thumb { background: #F5A623; }
+
+/* ── FILM GRAIN ────────────────────────────────────────── */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 15;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px;
+  mix-blend-mode: soft-light;
+}
+
+/* ── TYPOGRAPHY HELPERS ───────────────────────────────── */
+.font-anton {
+  font-family: var(--font-anton), Anton, Impact, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ── MARQUEE ──────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ── SECTION LABEL ────────────────────────────────────── */
+.section-label {
+  font-family: var(--font-barlow), Barlow, sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #F5A623;
+}
+
+/* ── CHALKBOARD DOTTED LINE ───────────────────────────── */
+.dotted-price-line {
+  flex: 1;
+  border-bottom: 1px dotted rgba(153,153,153,0.5);
+  margin: 0 8px;
+  margin-bottom: 4px;
 }
