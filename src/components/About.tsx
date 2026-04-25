@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const STATS = [
-  { number: "MENIU",    label: "ZILEI",        sub: "Proaspăt · Gustos · Accesibil" },
+  { number: "meniul",    label: "ZILEI",        sub: "Proaspăt · Gustos · Accesibil" },
   { number: "MECIURI",  label: "LIVE",         sub: "Fotbal · Champions League" },
   { number: "PETRECERI",label: "VIN + SÂM",    sub: "DJ Techno · House · Non-stop" },
 ];
@@ -55,15 +55,15 @@ export default function About() {
             <p className="text-[#999999] text-base md:text-lg leading-relaxed mb-6"
               style={{ fontFamily: "var(--font-barlow)" }}>
               Korona Pub Social Club e locul unde Craiova se adună seară de seară.
-              Fotbal live pe ecranele noastre mari, DJ sets techno &amp; house în fiecare
-              weekend, meniu zilei proaspăt gătit și bere rece — totul într-un singur loc.
+              Fotbal live, DJ sets techno &amp; house în fiecare
+              weekend, meniul zilei proaspăt gătit și bere rece — totul într-un singur loc.
               Simplu, autentic, al tău.
             </p>
             <div className="flex flex-col gap-3">
               {[
-                "Happy Hour zilnic 17:00–19:00 — bere & cocktailuri la prețuri speciale",
-                "Fotbal live: Champions League, Premier League, F1 & NBA",
-                "DJ Sets techno & house în fiecare sâmbătă de la 22:00",
+                "Happy Hour in fiecare sambata intre 22:00–23:00",
+                "Fotbal live: Champions League, Premier League",
+                "DJ Sets techno & house în fiecare vineri de la 22:00",
               ].map(item => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="w-2 h-2 border border-[#F5A623] shrink-0" />

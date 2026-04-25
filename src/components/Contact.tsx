@@ -119,12 +119,12 @@ export default function Contact() {
               viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.24 }}
               className="flex gap-2"
             >
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/koronapub_/" target="_blank" rel="noopener noreferrer"
                 className={`flex-1 flex items-center justify-center gap-2 py-4 ${card} text-[#999999] hover:text-[#FFFFFF] text-xs font-black tracking-[0.15em] uppercase`}
                 style={label}>
                 <InstagramIcon /> Instagram
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/profile.php?id=61581481125590" target="_blank" rel="noopener noreferrer"
                 className={`flex-1 flex items-center justify-center gap-2 py-4 ${card} text-[#999999] hover:text-[#FFFFFF] text-xs font-black tracking-[0.15em] uppercase`}
                 style={label}>
                 <FacebookIcon /> Facebook
@@ -139,7 +139,7 @@ export default function Contact() {
             className="border border-[#1E1E1E] overflow-hidden min-h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91551.61734234!2d23.77069!3d44.3187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cef4c6a2f7af07%3A0x6b4db3a5e1e8cd3!2sCraiova!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+              src="https://maps.google.com/maps?q=Strada+Imparatul+Traian+27+Craiova+Romania&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%" height="100%"
               style={{ border: 0, minHeight: 400, display: "block" }}
               loading="lazy"

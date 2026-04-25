@@ -28,7 +28,7 @@ export default function Menu() {
         >
           <div className="flex items-center gap-4 mb-5">
             <div className="w-8 h-[2px] bg-[#F5A623]" />
-            <span className="section-label">Meniu</span>
+            <span className="section-label">meniu</span>
           </div>
           <h2
             className="font-anton text-[#111111]"
@@ -122,7 +122,7 @@ export default function Menu() {
 
             <p className="mt-8 text-[#111111] text-xs italic"
               style={{ fontFamily: "var(--font-barlow)" }}>
-              * Prețuri includ TVA. Meniu subiect modificărilor. Întreabă ospătarul pentru ofertele zilei.
+              * Prețuri includ TVA. Întreabă ospătarul pentru ofertele zilei.
             </p>
           </motion.div>
         </AnimatePresence>
