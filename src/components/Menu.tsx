@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { menuData } from "@/lib/menuData";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Menu() {
   const [activeTab, setActiveTab] = useState("bere");
@@ -32,7 +33,11 @@ export default function Menu() {
           </div>
           <h2
             className="font-anton text-[#111111]"
-            style={{ fontFamily: "var(--font-anton)", fontSize: "clamp(2.5rem, 7vw, 6rem)", lineHeight: 0.92 }}
+            style={{
+              fontFamily: "var(--font-anton)",
+              fontSize: "clamp(2.5rem, 7vw, 6rem)",
+              lineHeight: 0.92,
+            }}
           >
             CE SERVIM
           </h2>
@@ -69,60 +74,94 @@ export default function Menu() {
             <div className="flex items-end justify-between mb-5 pb-2 border-b-[2px] border-[#F5A623]">
               <h3
                 className="font-anton text-[#111111]"
-                style={{ fontFamily: "var(--font-anton)", fontSize: "clamp(1.4rem, 3vw, 2.2rem)" }}
+                style={{
+                  fontFamily: "var(--font-anton)",
+                  fontSize: "clamp(1.4rem, 3vw, 2.2rem)",
+                }}
               >
                 {category.emoji} {category.label}
               </h3>
-              <span className="text-[#111111] text-xs tracking-[0.2em] uppercase mb-1"
-                style={{ fontFamily: "var(--font-barlow)", fontWeight: 600 }}>
+              <span
+                className="text-[#111111] text-xs tracking-[0.2em] uppercase mb-1"
+                style={{ fontFamily: "var(--font-barlow)", fontWeight: 600 }}
+              >
                 {category.items.length} articole
               </span>
             </div>
 
-            {/* Two-column list */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
+            {/* Items with images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
               {category.items.map((item, i) => (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: i * 0.04 }}
-                  className="flex items-end gap-0 py-3 border-b border-[#F5A623]/40 group"
+                  className="flex gap-4 p-3 border border-[#F5A623]/20 rounded-lg hover:shadow-md transition group bg-white"
                 >
-                  <div className="flex-1 min-w-0 pr-2">
+                  {/* IMAGE */}
+                  {item.image && (
+                    <div className="w-20 h-20 relative shrink-0 overflow-hidden rounded-md">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+
+                  {/* TEXT */}
+                  <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span
                         className="text-[#111111] font-black text-sm uppercase tracking-wide group-hover:text-[#F5A623] transition-colors"
-                        style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}
+                        style={{
+                          fontFamily: "var(--font-barlow)",
+                          fontWeight: 800,
+                        }}
                       >
                         {item.name}
                       </span>
+
                       {item.badge && (
-                        <span
-                          className="text-[9px] font-black tracking-[0.15em] uppercase px-1.5 py-0.5 bg-[#F5A623] text-[#111111] border border-[#F5A623]"
-                          style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}
-                        >
+                        <span className="text-[9px] font-black tracking-[0.15em] uppercase px-1.5 py-0.5 bg-[#F5A623] text-[#111111] border border-[#F5A623]">
                           {item.badge}
                         </span>
                       )}
                     </div>
-                    <div className="text-[#111111] text-xs mt-0.5 leading-snug"
-                      style={{ fontFamily: "var(--font-barlow)" }}>
+
+                    <div
+                      className="text-[#111111] text-xs mt-1 leading-snug"
+                      style={{ fontFamily: "var(--font-barlow)" }}
+                    >
                       {item.description}
                     </div>
+
+                    {/* PRICE */}
+                    <div className="mt-2 flex items-center gap-2">
+                      <div className="dotted-price-line flex-1" />
+                      <span
+                        className="text-[#F5A623] font-black text-base shrink-0"
+                        style={{
+                          fontFamily: "var(--font-barlow)",
+                          fontWeight: 800,
+                        }}
+                      >
+                        {item.price}
+                      </span>
+                    </div>
                   </div>
-                  <div className="dotted-price-line shrink-0 w-8 md:w-12" />
-                  <span className="text-[#F5A623] font-black text-base shrink-0"
-                    style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
-                    {item.price}
-                  </span>
                 </motion.div>
               ))}
             </div>
 
-            <p className="mt-8 text-[#111111] text-xs italic"
-              style={{ fontFamily: "var(--font-barlow)" }}>
-              * Prețuri includ TVA. Meniu subiect modificărilor. Întreabă ospătarul pentru ofertele zilei.
+            <p
+              className="mt-8 text-[#111111] text-xs italic"
+              style={{ fontFamily: "var(--font-barlow)" }}
+            >
+              * Prețuri includ TVA. Meniu subiect modificărilor. Întreabă
+              ospătarul pentru ofertele zilei.
             </p>
           </motion.div>
         </AnimatePresence>
