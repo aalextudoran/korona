@@ -17,62 +17,62 @@ const POSTERS: Poster[] = [
   {
     id: 1,
     overline: "în fiecare sâmbătă",
-    title: "LIVE\nMUSIC\n& DJ",
-    subtitle: "Techno · House · Deep House Funky",
+    title: "CONCERT\nLIVE",
+    subtitle: "Artiști live pe scena Korona",
     when: "SAT",
-    time: "22:00 → 03:00",
-    tags: ["Techno", "House", "DJ Set"],
+    time: "21:00 → 01:00",
+    tags: ["Concert", "Live", "Sâmbătă"],
     variant: "warm",
   },
   {
     id: 2,
-    overline: "champions league",
-    title: "FOOTBALL\nNIGHT",
-    subtitle: "Toate meciurile pe ecranele noastre",
-    when: "MAR & MIE",
-    time: "Zilele de meci",
-    tags: ["UCL", "Sport Live", "Ecran Mare"],
+    overline: "în fiecare vineri",
+    title: "DJ\nNIGHT",
+    subtitle: "Techno · House · Deep House Funky",
+    when: "VIN",
+    time: "22:00 → 03:00",
+    tags: ["Techno", "House", "DJ Set"],
     variant: "dark",
   },
   {
     id: 3,
-    overline: "luni – vineri",
-    title: "HAPPY\nHOUR",
-    subtitle: "Bere + cocktailuri la prețuri speciale",
+    overline: "în fiecare zi",
+    title: "MENIUL\nZILEI",
+    subtitle: "Bucătărie proaspătă, gătit zilnic",
     when: "ZI",
-    time: "17:00 → 19:00",
-    tags: ["Reduceri", "Bere", "Cocktailuri"],
+    time: "12:00 → 15:00",
+    tags: ["Mâncare", "Zilnic", "Prânz"],
     variant: "card",
   },
   {
     id: 4,
-    overline: "în fiecare vineri",
-    title: "FRIDAY\nSESSION",
-    subtitle: "Muzică ambientală · Social vibes",
-    when: "VIN",
-    time: "20:00 → 02:00",
-    tags: ["Vineri", "Social", "Muzică"],
-    variant: "card",
+    overline: "ori de câte ori e meci",
+    title: "SEARA\nDE MECI",
+    subtitle: "Toate meciurile importante pe ecranele noastre",
+    when: "LIVE",
+    time: "Când e meci",
+    tags: ["Fotbal", "Sport Live", "Ecran Mare"],
+    variant: "dark",
   },
   {
     id: 5,
-    overline: "prima joi a lunii",
-    title: "Concert\nLive",
-    subtitle: "Cântă · Râde · Câștigă premii",
-    when: "JOI",
-    time: "21:00 → 01:00",
-    tags: ["Concert", "Premii", "Distracție"],
-    variant: "warm",
+    overline: "în fiecare sâmbătă",
+    title: "HAPPY\nHOUR",
+    subtitle: "Bere + cocktailuri la prețuri speciale",
+    when: "SAT",
+    time: "22:00 → 23:00",
+    tags: ["Reduceri", "Bere"],
+    variant: "card",
   },
   {
     id: 6,
-    overline: "weekend",
-    title: "SPORT\nWEEKEND",
-    subtitle: "F1 · NBA · Premier League",
-    when: "SAM & DUM",
+    overline: "în fiecare zi",
+    title: "GOOD\nVIBES",
+    subtitle: "Mâncare bună și atmosferă caldă",
+    when: "MEREU",
     time: "toată ziua",
-    tags: ["Formula 1", "NBA", "Sport"],
-    variant: "dark",
+    tags: ["Mâncare", "Atmosferă", "Zilnic"],
+    variant: "warm",
   },
 ];
 
@@ -227,13 +227,13 @@ export default function Events() {
             Program actualizat săptămânal — seri speciale, DJ sets, meciuri live și surprize.
           </span>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/koronapub_/"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 px-6 py-2.5 bg-[#F5A623] text-[#111111] text-xs font-black tracking-[0.2em] uppercase hover:brightness-110 transition-all"
             style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}
           >
-            @koronapub.craiova
+            @koronapub_
           </a>
         </motion.div>
       </div>

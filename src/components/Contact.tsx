@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock } from "lucide-react";
 
@@ -33,6 +34,20 @@ const card = "bg-[#1E1E1E] border border-[#1E1E1E] hover:border-[#F5A623] transi
 const label = { fontFamily: "var(--font-barlow)", fontWeight: 800 };
 
 export default function Contact() {
+  const [mapEnabled, setMapEnabled] = useState(false);
+
+  useEffect(() => {
+    const check = () => setMapEnabled(localStorage.getItem("korona_cookies") === "accepted");
+    check();
+    window.addEventListener("korona_cookies_change", check);
+    return () => window.removeEventListener("korona_cookies_change", check);
+  }, []);
+
+  const enableMap = () => {
+    localStorage.setItem("korona_cookies", "accepted");
+    window.dispatchEvent(new Event("korona_cookies_change"));
+  };
+
   return (
     <section id="contact" className="py-20 md:py-28 bg-[#111111]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -119,12 +134,12 @@ export default function Contact() {
               viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.24 }}
               className="flex gap-2"
             >
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/koronapub_/" target="_blank" rel="noopener noreferrer"
                 className={`flex-1 flex items-center justify-center gap-2 py-4 ${card} text-[#999999] hover:text-[#FFFFFF] text-xs font-black tracking-[0.15em] uppercase`}
                 style={label}>
                 <InstagramIcon /> Instagram
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/profile.php?id=61581481125590" target="_blank" rel="noopener noreferrer"
                 className={`flex-1 flex items-center justify-center gap-2 py-4 ${card} text-[#999999] hover:text-[#FFFFFF] text-xs font-black tracking-[0.15em] uppercase`}
                 style={label}>
                 <FacebookIcon /> Facebook
@@ -138,14 +153,40 @@ export default function Contact() {
             viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.15 }}
             className="border border-[#1E1E1E] overflow-hidden min-h-[400px]"
           >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91551.61734234!2d23.77069!3d44.3187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cef4c6a2f7af07%3A0x6b4db3a5e1e8cd3!2sCraiova!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
-              width="100%" height="100%"
-              style={{ border: 0, minHeight: 400, display: "block" }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Korona Pub Craiova"
-            />
+            {mapEnabled ? (
+              <iframe
+                src="https://maps.google.com/maps?q=Strada+Imparatul+Traian+27+Craiova+Romania&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="100%"
+                style={{ border: 0, minHeight: 400, display: "block" }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Korona Pub Craiova"
+              />
+            ) : (
+              <div
+                className="flex flex-col items-center justify-center gap-5 min-h-[400px] px-8 text-center"
+                style={{ background: "#1E1E1E" }}
+              >
+                <MapPin size={32} className="text-[#F5A623]" />
+                <div>
+                  <p className="text-[#FFFFFF] text-sm font-black tracking-wide mb-2"
+                    style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+                    Harta este dezactivată
+                  </p>
+                  <p className="text-[#999999] text-xs leading-relaxed max-w-xs"
+                    style={{ fontFamily: "var(--font-barlow)" }}>
+                    Google Maps folosește cookie-uri. Acceptă cookie-urile pentru a vedea harta.
+                  </p>
+                </div>
+                <button
+                  onClick={enableMap}
+                  className="cursor-pointer px-6 py-2.5 bg-[#F5A623] text-[#111111] text-xs font-black tracking-[0.2em] uppercase hover:brightness-110 transition-all"
+                  style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}
+                >
+                  Activează harta
+                </button>
+              </div>
+            )}
           </motion.div>
         </div>
 

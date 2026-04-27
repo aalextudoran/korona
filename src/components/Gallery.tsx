@@ -28,17 +28,17 @@ type Slot = {
 // r6: [P]     [S]      [P]
 
 const SLOTS: Slot[] = [
-  { id:  1, label: "Muzică live",      src: "/photos/concert_night2.jfif", gridColumn: "1", gridRow: "1 / span 2" },
-  { id:  2, label: "Bere la halbă",   src: "/photos/beer.jfif",            gridColumn: "3", gridRow: "1" },
-  { id:  3, label: "Meniul zilei",    src: "/photos/food2.jpg",            gridColumn: "2", gridRow: "1 / span 2" },
-  { id:  4, label: "Meniul zilei",    src: "/photos/food4.jpg",            gridColumn: "3", gridRow: "3 / span 2" },
+  { id:  1, label: "Muzică live",      src: "/photos/concert_night2.jpg", gridColumn: "1", gridRow: "1 / span 2" },
+  { id:  2, label: "Bere la halbă",   src: "/photos/beer.jpg",            gridColumn: "3", gridRow: "1" },
+  { id:  3, label: "Meniul Zilei",     src: "/photos/food2.jpg",            gridColumn: "2", gridRow: "1 / span 2" },
+  { id:  4, label: "Mâncare Korona",  src: "/photos/food4.jpg",            gridColumn: "3", gridRow: "3 / span 2" },
   { id:  5, label: "Champions League",src: "/photos/meci6.jpeg",           gridColumn: "1", gridRow: "5 / span 2" },
-  { id:  6, label: "Atmosfera Korona",src: "/photos/local.jfif",           gridColumn: "2", gridRow: "3 / span 2" },
-  { id:  7, label: "Football night",  src: "/photos/meci.jfif",            gridColumn: "3", gridRow: "2" },
+  { id:  6, label: "Atmosfera Korona",src: "/photos/local.jpg",           gridColumn: "2", gridRow: "3 / span 2" },
+  { id:  7, label: "Football night",  src: "/photos/meci.jpg",            gridColumn: "3", gridRow: "2" },
   { id:  8, label: "Desert",          src: "/photos/food7.jpg",            gridColumn: "1", gridRow: "4", objectPosition: "50% 38%" },
-  { id:  9, label: "DJ Set weekend",  src: "/photos/dj.jfif",              gridColumn: "2", gridRow: "5" },
+  { id:  9, label: "DJ Set weekend",  src: "/photos/dj.jpg",              gridColumn: "2", gridRow: "5" },
   { id: 10, label: "Happy Hour",      src: "/photos/happyHour2.jpg",       gridColumn: "1", gridRow: "3", noZoom: true },
-  { id: 11, label: "Karaoke Night",   src: "/photos/concert_night.jfif",   gridColumn: "3", gridRow: "5 / span 2" },
+  { id: 11, label: "Concert Live",    src: "/photos/concert_night.jpg",   gridColumn: "3", gridRow: "5 / span 2" },
   { id: 12, label: "Interior bar",    src: "/photos/bar1.jpeg",            gridColumn: "2", gridRow: "6" },
 ];
 

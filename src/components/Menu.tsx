@@ -29,7 +29,7 @@ export default function Menu() {
         >
           <div className="flex items-center gap-4 mb-5">
             <div className="w-8 h-[2px] bg-[#F5A623]" />
-            <span className="section-label">Meniu</span>
+            <span className="section-label">meniu</span>
           </div>
           <h2
             className="font-anton text-[#111111]"

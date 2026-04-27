@@ -1,156 +1,118 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Termeni și Condiții",
-  description: "Termenii și condițiile de utilizare a serviciilor Korona Pub Social Club Craiova.",
+  description: "Termenii și condițiile de utilizare Korona Pub Social Club Craiova.",
+  robots: { index: false, follow: false },
 };
 
 export default function Termeni() {
   return (
-    <div className="min-h-screen bg-[#111111] text-[#FFFFFF]" style={{ fontFamily: "var(--font-barlow, sans-serif)" }}>
-      {/* Header */}
-      <div className="border-b-[2px] border-[#F5A623] bg-[#0D0D0D]">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-          <Link href="/" className="text-[#F5A623] text-xs font-black tracking-[0.2em] uppercase hover:text-[#FFFFFF] transition-colors">
-            ← Înapoi acasă
-          </Link>
-          <span className="text-[#999999] text-xs tracking-[0.2em] uppercase">Korona Pub Social Club</span>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <div className="flex items-center gap-4 mb-3">
+    <>
+      <Navbar />
+      <main className="bg-[#111111] min-h-screen text-[#FFFFFF]">
+      <div className="max-w-3xl mx-auto px-6 pt-36 pb-24">
+        <div className="flex items-center gap-4 mb-8">
           <div className="w-8 h-[2px] bg-[#F5A623]" />
-          <span className="text-[#F5A623] text-[10px] font-black tracking-[0.3em] uppercase">Document legal</span>
+          <span className="text-[#F5A623] text-[10px] font-black tracking-[0.3em] uppercase" style={{ fontFamily: "var(--font-barlow)" }}>
+            Legal
+          </span>
         </div>
-        <h1 className="text-3xl font-bold mb-2 text-[#CCCCCC]" style={{ fontFamily: "var(--font-barlow, sans-serif)", fontWeight: 700, letterSpacing: "0.02em" }}>
-          Termeni și Condiții
+        <h1 className="font-anton text-[#FFFFFF] mb-12" style={{ fontFamily: "var(--font-anton)", fontSize: "clamp(2rem, 5vw, 4rem)", lineHeight: 0.92 }}>
+          TERMENI<br />ȘI CONDIȚII
         </h1>
-        <p className="text-[#666666] text-sm mb-12">Ultima actualizare: ianuarie 2025</p>
 
-        <div className="flex flex-col gap-10 text-[#CCCCCC] leading-relaxed">
-
+        <div className="flex flex-col gap-8 text-[#999999] text-sm leading-relaxed" style={{ fontFamily: "var(--font-barlow)" }}>
           <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">1. Identificarea societății</h2>
-            <p className="mb-2">
-              <strong className="text-[#FFFFFF]">Korona S.R.L.</strong>, cu sediul la Strada Împăratul Traian 27,
-              200399 Craiova, județul Dolj, România · Tel: <span className="text-[#F5A623]">0735 964 474</span>
-            </p>
+            <h2 className="text-[#FFFFFF] font-black tracking-[0.15em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+              1. Informații generale
+            </h2>
             <p>
-              Prin accesarea site-ului <span className="text-[#FFFFFF] font-bold">koronapub.ro</span> și utilizarea
-              serviciilor noastre, ești de acord cu prezentii termeni și condiții. Dacă nu ești de acord,
-              te rugăm să nu utilizezi site-ul.
+              Prezentul site aparține Korona Pub Social Club, Strada Împăratul Traian 27, Craiova,
+              România. Prin accesarea site-ului, acceptați termenii și condițiile de mai jos.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">2. Servicii oferite</h2>
-            <p className="mb-3">Korona Pub Social Club oferă:</p>
-            <ul className="flex flex-col gap-2 pl-4">
-              {[
-                "Servicii de bar și restaurație (bere, cocktailuri, meniu zilei)",
-                "Transmisiuni live ale evenimentelor sportive (fotbal, F1, NBA)",
-                "Evenimente muzicale — DJ sets techno & house, concerte live",
-                "Posibilitate de rezervare a meselor pentru grupuri",
-              ].map(item => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="text-[#F5A623] mt-1 shrink-0">◆</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">3. Rezervări</h2>
-            <p className="mb-2">
-              Rezervările se pot efectua telefonic sau prin WhatsApp la numerele afișate pe site. O rezervare este confirmată
-              doar după contactul direct cu personalul nostru.
-            </p>
+            <h2 className="text-[#FFFFFF] font-black tracking-[0.15em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+              2. Utilizarea site-ului
+            </h2>
             <p>
-              Vă rugăm să anulați rezervarea cu cel puțin 2 ore înainte în caz de neprezentare. Rezervările pentru grupuri
-              mari (&gt;10 persoane) pot necesita o confirmare suplimentară.
+              Site-ul este destinat exclusiv informării clienților cu privire la serviciile, programul
+              și evenimentele Korona Pub Social Club. Este interzisă reproducerea, distribuirea sau
+              modificarea conținutului fără acordul scris al operatorului.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">4. Politica privind vârsta</h2>
+            <h2 className="text-[#FFFFFF] font-black tracking-[0.15em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+              3. Rezervări
+            </h2>
             <p>
-              Accesul în local și consumul de băuturi alcoolice este permis exclusiv persoanelor cu vârsta de{" "}
-              <span className="text-[#FFFFFF] font-bold">minimum 18 ani</span>. Personalul nostru are dreptul de a solicita
-              un act de identitate. Consumul responsabil de alcool este încurajat.
+              Rezervările efectuate prin telefon sau WhatsApp sunt supuse disponibilității și sunt
+              confirmate direct de echipa noastră. Ne rezervăm dreptul de a refuza sau modifica o
+              rezervare în cazuri excepționale, cu notificarea prealabilă a clientului.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">5. Program și prețuri</h2>
+            <h2 className="text-[#FFFFFF] font-black tracking-[0.15em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+              4. Evenimente și program
+            </h2>
             <p>
-              Programul de funcționare și prețurile afișate pe site sunt orientative și pot fi modificate fără notificare
-              prealabilă. Prețurile din local includ TVA conform legislației în vigoare.
-              Verificați întotdeauna prețurile actuale cu personalul nostru.
+              Programul evenimentelor publicat pe site este orientativ și poate fi modificat fără
+              notificare prealabilă. Vă recomandăm să urmăriți paginile noastre de social media
+              pentru informații actualizate.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">6. Conduită în local</h2>
+            <h2 className="text-[#FFFFFF] font-black tracking-[0.15em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+              5. Răspundere
+            </h2>
             <p>
-              Korona Pub Social Club este un spațiu de socializare pentru toată lumea. Ne rezervăm dreptul de a refuza
-              accesul sau de a solicita plecarea oricărei persoane care tulbură ordinea publică, este sub influența excesivă
-              a alcoolului sau adoptă un comportament agresiv față de personal sau alți clienți.
+              Korona Pub Social Club nu își asumă răspunderea pentru inexactități sau întreruperi
+              ale serviciului site-ului. Informațiile sunt furnizate ca atare, fără garanții
+              de nicio natură.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">7. Evenimente și modificări de program</h2>
+            <h2 className="text-[#FFFFFF] font-black tracking-[0.15em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+              6. Legea aplicabilă
+            </h2>
             <p>
-              Evenimentele anunțate (DJ sets, meciuri, concerte) pot fi modificate sau anulate din motive independente de
-              voința noastră (tehnologie, forță majoră, modificări de program sportiv). Nu ne asumăm responsabilitatea pentru
-              astfel de modificări, însă vom comunica orice schimbare pe canalele noastre de social media.
+              Prezentele condiții sunt guvernate de legislația română. Orice litigiu va fi soluționat
+              de instanțele competente din Craiova, România.
             </p>
           </section>
 
           <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">8. Proprietate intelectuală</h2>
+            <h2 className="text-[#FFFFFF] font-black tracking-[0.15em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}>
+              7. Contact
+            </h2>
             <p>
-              Toate conținuturile de pe site-ul <span className="text-[#FFFFFF] font-bold">koronapub.ro</span> — texte,
-              imagini, logo, design — sunt proprietatea Korona Pub Social Club și sunt protejate de legea drepturilor de autor.
-              Reproducerea fără acordul scris este interzisă.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">9. Limitarea răspunderii</h2>
-            <p>
-              Korona Pub Social Club nu răspunde pentru eventualele erori sau întreruperi ale site-ului. Informațiile de pe
-              site sunt furnizate cu bună-credință, dar nu garantăm acuratețea completă a tuturor detaliilor în orice moment.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">10. Legislație aplicabilă</h2>
-            <p>
-              Acești termeni sunt guvernați de legislația română în vigoare. Orice litigiu va fi soluționat pe cale amiabilă
-              sau, în caz contrar, de instanțele competente din Craiova, România.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[#F5A623] text-lg font-black uppercase tracking-widest mb-3">11. Contact</h2>
-            <p>
-              Pentru orice întrebări legate de acești termeni, ne poți contacta prin telefon sau email — detalii în secțiunea
-              Contact de pe pagina principală.
+              Pentru orice întrebări legate de acești termeni, ne puteți contacta la{" "}
+              <a href="tel:+40735964474" className="text-[#F5A623] hover:text-[#FFFFFF] transition-colors">0735 964 474</a>.
             </p>
           </section>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-[#1E1E1E] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <span className="text-[#999999] text-xs">© 2025 Korona Pub Social Club · Craiova, România</span>
-          <Link href="/politica-confidentialitate" className="text-[#F5A623] text-xs font-black tracking-[0.2em] uppercase hover:text-[#FFFFFF] transition-colors">
-            Politica de Confidențialitate →
+        <div className="mt-16 pt-8 border-t border-[#1E1E1E]">
+          <Link
+            href="/"
+            className="text-[#F5A623] text-xs font-black tracking-[0.2em] uppercase hover:text-[#FFFFFF] transition-colors"
+            style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}
+          >
+            ← Înapoi la site
           </Link>
         </div>
       </div>
-    </div>
+    </main>
+    <Footer />
+    </>
   );
 }

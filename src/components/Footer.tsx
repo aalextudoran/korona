@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const LINKS = [
   { label: "Acasă",      href: "#hero" },
-  { label: "Meniu",      href: "#menu" },
+  { label: "meniul",      href: "#menu" },
   { label: "Evenimente", href: "#events" },
   { label: "Galerie",    href: "#gallery" },
   { label: "Contact",    href: "#contact" },
@@ -64,12 +64,13 @@ export default function Footer() {
         >
           {/* Logo + tagline */}
           <div className="md:col-span-2 flex flex-col gap-5">
-            <div className="relative h-16 w-60 bg-[#1E1E1E] px-2 py-1.5 border border-[#1E1E1E]" style={{ lineHeight: 0 }}>
+            <div style={{ lineHeight: 0 }}>
               <Image
                 src="/logo.png"
                 alt="Korona Pub Social Club"
-                fill
-                className="object-contain object-left"
+                width={1170}
+                height={751}
+                className="object-contain object-left h-20 w-auto origin-left scale-x-130 scale-y-120"
               />
             </div>
             <p
@@ -81,11 +82,11 @@ export default function Footer() {
             </p>
             {/* Social icons */}
             <div className="flex gap-3">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/koronapub_/" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 border border-[#1E1E1E] flex items-center justify-center text-[#999999] hover:text-[#FFFFFF] hover:border-[#F5A623] transition-colors">
                 <InstagramIcon />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/profile.php?id=61581481125590" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 border border-[#1E1E1E] flex items-center justify-center text-[#999999] hover:text-[#FFFFFF] hover:border-[#F5A623] transition-colors">
                 <FacebookIcon />
               </a>
@@ -147,7 +148,7 @@ export default function Footer() {
             className="text-[#999999] text-xs"
             style={{ fontFamily: "var(--font-barlow)" }}
           >
-            © 2025 Korona Pub Social Club · Craiova, România · Consumul responsabil de alcool este recomandat · 18+
+            © 2026 Korona Pub Social Club · Craiova, România
           </span>
           <div className="flex items-center gap-4">
             <a
@@ -174,6 +175,21 @@ export default function Footer() {
               ↑ SUS
             </button>
           </div>
+        </div>
+
+        {/* Devsoft credit */}
+        <div className="mt-4 pb-4 text-center">
+          <span className="text-[#555555] text-[10px]" style={{ fontFamily: "var(--font-barlow)" }}>
+            Drepturi rezervate{" "}
+            <a
+              href="https://www.devsoft.ro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#F5A623] hover:text-[#FFFFFF] transition-colors"
+            >
+              DEVSOFT
+            </a>
+          </span>
         </div>
       </div>
     </footer>

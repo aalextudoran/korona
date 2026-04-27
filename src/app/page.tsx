@@ -7,6 +7,7 @@ import Events from "@/components/Events";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 /** Thin yellow rule between sections */
 function Divider() {
@@ -28,6 +29,7 @@ export default function Home() {
       <Divider />
       <Contact />
       <Footer />
+      <CookieBanner />
     </main>
   );
 }

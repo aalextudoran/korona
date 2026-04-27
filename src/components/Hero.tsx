@@ -116,7 +116,7 @@ export default function Hero() {
             className="mt-5 md:mt-6 text-[#999999] text-sm md:text-base lg:text-lg tracking-[0.3em] uppercase font-black"
             style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}
           >
-            Fotbal Live&nbsp;&nbsp;•&nbsp;&nbsp;DJ Techno&nbsp;&nbsp;•&nbsp;&nbsp;Meniu Zilei&nbsp;&nbsp;•&nbsp;&nbsp;Craiova
+            Fotbal Live&nbsp;&nbsp;•&nbsp;&nbsp;DJ Techno&nbsp;&nbsp;•&nbsp;&nbsp;Meniu Zilnic&nbsp;&nbsp;•&nbsp;&nbsp;Craiova
           </motion.p>
         </div>
 
@@ -131,7 +131,7 @@ export default function Hero() {
             className="cursor-pointer px-7 py-3.5 bg-[#F5A623] text-[#111111] text-xs font-black tracking-[0.2em] uppercase hover:brightness-110 transition-all active:scale-95"
             style={{ fontFamily: "var(--font-barlow)", fontWeight: 800 }}
           >
-            Vezi Meniul
+            Vezi Meniu
           </button>
           <button
             onClick={() => go("events")}
