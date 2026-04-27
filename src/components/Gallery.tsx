@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 type Slot = {
   id: number;
@@ -28,7 +28,7 @@ type Slot = {
 // r6: [P]     [S]      [P]
 
 const SLOTS: Slot[] = [
-  { id:  1, label: "Muzică live",      src: "/photos/concert_night2.jpg", gridColumn: "1", gridRow: "1 / span 2" },
+  { id:  1, label: "Muzică live",      src: "/photos/concert_night2.jpeg", gridColumn: "1", gridRow: "1 / span 2" },
   { id:  2, label: "Bere la halbă",   src: "/photos/beer.jpg",            gridColumn: "3", gridRow: "1" },
   { id:  3, label: "Meniul Zilei",     src: "/photos/food2.jpg",            gridColumn: "2", gridRow: "1 / span 2" },
   { id:  4, label: "Mâncare Korona",  src: "/photos/food4.jpg",            gridColumn: "3", gridRow: "3 / span 2" },

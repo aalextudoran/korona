@@ -62,8 +62,9 @@ export default function About() {
             <div className="flex flex-col gap-3">
               {[
                 "Happy Hour in fiecare sambata intre 22:00–23:00",
-                "Fotbal live: Champions League, Premier League",
+                "Fotbal live: Champions League, LaLiga, SuperLiga",
                 "DJ Sets techno & house în fiecare vineri de la 22:00",
+                "Muzică live in fiecare sâmbătă seara",
               ].map(item => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="w-2 h-2 border border-[#F5A623] shrink-0" />
