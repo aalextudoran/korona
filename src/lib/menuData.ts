@@ -892,9 +892,9 @@ export const menuData: MenuCategory[] = [
       {
         id: 122,
         name: "Pomana porcului",
-        description: "Carne la găleată cu cartofi prăjiți și murături.... 600g",
+        description: "Carne la găleată cu mămăligă și murături - 600g",
         price: "59 lei",
-        image: "", // 👈 nou
+        image: "/photos/Meniu_Carne_Galeata_Cu_Muraturi.png", // 👈 nou
       },
       {
         id: 123,

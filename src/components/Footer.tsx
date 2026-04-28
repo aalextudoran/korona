@@ -90,6 +90,18 @@ export default function Footer() {
                 className="w-9 h-9 border border-[#1E1E1E] flex items-center justify-center text-[#999999] hover:text-[#FFFFFF] hover:border-[#F5A623] transition-colors">
                 <FacebookIcon />
               </a>
+              <a
+                href="https://www.tiktok.com/@koronapub_craiova"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 border border-[#1E1E1E] flex items-center justify-center text-[#999999] hover:text-[#FFFFFF] hover:border-[#F5A623] transition-colors"
+              >
+                <img
+                  src="/Photos/tiktok_icon.png"
+                  alt="TikTok"
+                  className="w-5 h-5"
+                />
+              </a>
             </div>
           </div>
 
