@@ -160,7 +160,7 @@ export default function Menu() {
               className="mt-8 text-[#111111] text-xs italic"
               style={{ fontFamily: "var(--font-barlow)" }}
             >
-              * Prețuri includ TVA. Meniu subiect modificărilor. Întreabă
+              * Prețuri includ TVA. Întreabă
               ospătarul pentru ofertele zilei.
             </p>
           </motion.div>
